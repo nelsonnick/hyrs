@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>槐荫区职业介绍中心——扣款信息</title>
+		<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<script >
+		function senfe(o, a, b, c, d) {
+			var t = document.getElementById(o).getElementsByTagName("tr");
+			for (var i = 0; i < t.length; i++) {
+				t[i].style.backgroundColor = (t[i].sectionRowIndex % 2 == 0) ? a
+						: b;
+				t[i].onclick = function() {
+					if (this.x != "1") {
+						this.x = "1";
+						this.style.backgroundColor = d;
+					} else {
+						this.x = "0";
+						this.style.backgroundColor = (this.sectionRowIndex % 2 == 0) ? a
+								: b;
+					}
+				};
+				t[i].onmouseover = function() {
+					if (this.x != "1")
+						this.style.backgroundColor = c;
+				};
+				t[i].onmouseout = function() {
+					if (this.x != "1")
+						this.style.backgroundColor = (this.sectionRowIndex % 2 == 0) ? a
+								: b;
+				};
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function() {
+			//senfe("表格名称","奇数行背景","偶数行背景","鼠标经过背景","点击后背景");
+			senfe("mytable", "#f8fbfc", "#e5f1f4", "#ecfbd4", "#bce774");
+		});
+	</script>
+
+	<style type="text/css">
+	.blue {
+		color: blue;
+	}
+	
+	.red {
+		color: red;
+	}
+	
+	.green {
+		color: green;
+	}
+	
+	.yellow {
+		color: yellow;
+	}
+	</style>
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/user/passwordAlterUI">${(userName)!''}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="${contextPath}/user/homeUI">公告栏</a></li>
+				<li><a href="${contextPath}/person/insureUI">社保信息</a></li>
+				<li><a href="${contextPath}/operate/operateUI">业务信息</a></li>
+				<li class="active"><a href="${contextPath}/money/moneyUI">银行扣款</a></li>
+				<li><a href="${contextPath}/information/infoUI">信息变更</a></li>
+				<li><a href="${contextPath}/operate/operateCountUI">业务统计</a></li>
+				<#if userLocationId!=15 && userLocationId!=19>
+					<li><a href="${contextPath}/card/cardUI">批量开卡</a></li>
+				</#if>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="${contextPath}/user/logout">退出程序</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<form class="form-inline" action="${contextPath}/money/moneyQuery" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control" id="name" placeholder="请输入人员姓名或证件号码" value="${(queryString)!''}" name="query">
+			</div>
+			<button type="submit" class="btn btn-default">查找</button>
+		</form>
+	</div>
+
+	<hr />
+
+	<div class="container-fluid  table-responsive">
+		<table class="table table-bordered table-condensed" id="mytable">
+			<tr>
+				<th class="text-center">人员姓名</th>
+				<th class="text-center">证件号码</th>
+				<th class="text-center">缴费基数</th>
+				<th class="text-center">医保比例</th>
+				<th class="text-center">扣款月份</th>
+				<th class="text-center">是否扣款</th>
+				<th class="text-center">是否退款</th>
+				<th class="text-center">退款原因</th>
+
+			</tr>
+			<#list moneyPage.getList() as x>
+			<tr>
+				<td class="text-center">${(x.name)!''}</td>
+				<td class="text-center">${(x.number)!''}</td>
+				<td class="text-center">${(x.base)!''}</td>
+				<td class="text-center">${(x.radio)!''}</td>
+				<td class="text-center">${(x.month)!''}</td>
+				<td class="text-center"><span>${(x.content)!''}</span></td>
+				<td class="text-center">${(x.return)!''}</td>
+				<td class="text-center">${(x.reason)!''}</td>
+			</tr>
+			</#list>
+		</table>
+		<#include "/paginate.html" /> <@paginate
+		currentPage=moneyPage.pageNumber totalPage=moneyPage.totalPage
+		actionUrl="${contextPath}/money/moneyQuery/" />
+	</div>
+
+</body>
+</html>

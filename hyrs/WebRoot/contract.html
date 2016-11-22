@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>代缴合同</title>
+	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script language="javascript" src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script language="javascript" src="${contextPath}/jquery/jquery.jqprint.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#print").click(function() {
+				$(".my_show").jqprint();
+			})
+		});
+	</script>
+	<style media="print">
+		.Noprint {
+			display: none;
+		}
+		.PageNext {
+			page-break-after: always;
+		}
+	</style>
+</head>
+<body>
+	<center class="Noprint">
+		<p>
+			<object id="WebBrowser"
+				classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0"
+				width="0"></object>
+			<button type="button" class="btn btn-success"
+				onclick="window.print()">直接打印</button>
+			<button type="button" class="btn btn-default"
+				onclick="history.go(-1)">返回上级</button>
+			<br />
+		</p>
+	</center>
+	<div class="my_show">
+		<div style="position:absolute; top:2em; left:12em;">
+			<span><h1 style="font-weight:bold">城镇职工保险代缴合同</h1></span>
+		</div>
+		<div style="position:absolute; top:7em; left:4em;">
+			<span>甲方：${(lname)!''}人力资源和社会保障服务中心（以下简称甲方）</span>
+		</div>
+		<div style="position:absolute; top:8.5em; left:4em;">
+			<span>乙方：${(pname)!''}（以下简称乙方）&nbsp;&nbsp;&nbsp;&nbsp;身份证号：${(pnumber)!''}</span>
+		</div>
+		<div style="position:absolute; top:10em; left:6em;">
+			<span>根据原济南市劳动局《济南市职业介绍机构开展人事代理工作暂行办法》有关规</span>
+		</div>
+		<div style="position:absolute; top:11.5em; left:4em;">
+			<span>定，经双方协商，就乙方自愿委托甲方代缴城镇职工保险，签订本合同。</span>
+		</div>
+		<div style="position:absolute; top:13em; left:6em;">
+			<span style="font-weight:bold">一、甲方责任</span>
+		</div>
+		<div style="position:absolute; top:14.5em; left:6em;">
+			<span>甲方按照乙方的委托为其代缴城镇职工养老保险、医疗保险；代办退休手续、代发</span>
+		</div>
+		<div style="position:absolute; top:16em; left:4em;">
+			<span>退休证、整订退休档案并移交社区手续；并办理死亡善后手续；代办城镇职工养老保险</span>
+		</div>
+		<div style="position:absolute; top:17.5em; left:4em;">
+			<span>、医疗保险合户、姓名、身份证号码纠错的手续及医保卡发放工作。</span>
+		</div>
+		<div style="position:absolute; top:19em; left:6em;">
+			<span style="font-weight:bold">二、乙方的责任</span>
+		</div>
+		<div style="position:absolute; top:20.5em; left:6em;">
+			<span>1.乙方应遵守国家及省、市有关规定，申请上述服务时需根据服务的需要，必须提</span>
+		</div>
+
+		<div style="position:absolute; top:22em; left:4em;">
+			<span>供相关的、真实可靠的证明材料（包括身份证、户口本、档案等），不得弄虚作假。</span>
+		</div>
+		<div style="position:absolute; top:23.5em; left:6em;">
+			<span>2.乙方应于每月5日前，持身份证原件到甲方办理当月城镇职工保险相关手续（增</span>
+		</div>
+		<div style="position:absolute; top:25em; left:4em;">
+			<span>、减员、变更等），缴费基数和缴费比例按国家规定执行。</span>
+		</div>
+		<div style="position:absolute; top:26.5em; left:6em;">
+			<span>3.乙方应于每月10日前确保银行卡内余额充足，并及时查询银行账户信息，如遇扣</span>
+		</div>
+		<div style="position:absolute; top:28em; left:4em;">
+			<span>费不成功或退款等情况，请与缴费银行联系。（建议前往银行开通短信通知服务）</span>
+		</div>
+		<div style="position:absolute; top:29.5em; left:6em;">
+			<span>4.乙方在甲方处缴费并到达法定退休时间当月，应于当月6日后到甲方登记退休减</span>
+		</div>
+		<div style="position:absolute; top:31em; left:4em;">
+			<span>员，并携带个人档案等相关材料申请办理退休手续。</span>
+		</div>
+		<div style="position:absolute; top:32.5em; left:6em;">
+			<span style="font-weight:bold">三、参保情况说明</span>
+		</div>
+		<div style="position:absolute; top:34em; left:6em;">
+			<span>1.乙方于甲方处办理${(year)!''}年${(month)!''}月的参保业务，办理参保时的缴费基数为${(baseAfter)!''}，</span>
+		</div>
+		<div style="position:absolute; top:35.5em; left:4em;">
+			<span>医疗保险比例为${(radioAfter)!''}，缴费金额为${(money)!''}。</span>
+		</div>
+		<div style="position:absolute; top:37em; left:6em;">
+			<span>2.每年7月调整缴费基数，请注意当地报纸或电话咨询：${(lphone)!''}。</span>
+		</div>
+		<div style="position:absolute; top:38.5em; left:6em;">
+			<span>3.乙方缴纳医保费满一个月后，带此代缴合同、身份证及复印件1份、现金10元，</span>
+		</div>
+		<div style="position:absolute; top:40em; left:4em;">
+			<span>与每月的5日、15日、25日三天(如遇节假日、双休日顺延)到槐荫区人社局(北</span>
+		</div>
+		<div style="position:absolute; top:41.5em; left:4em;">
+			<span>小辛庄西街24号)照相。医保卡照相后连续缴费满6个月，可到甲方处领取医保卡。</span>
+		</div>
+		<div style="position:absolute; top:43em; left:4em;">
+			<span>照相馆电话：86906527（已有医保卡的参保人不需要再拍照）</span>
+		</div>
+		<div style="position:absolute; top:44.5em; left:6em;">
+			<span>4.如参保人中途退出缴费，依照国家、省、市相关法律、法规、政策执行。</span>
+		</div>
+		<div style="position:absolute; top:46em; left:6em;">
+			<span style="font-weight:bold">四、其他</span>
+		</div>
+		<div style="position:absolute; top:47.5em; left:6em;">
+			<span>1.本合同签订起生效，无固定期限。乙方变更医保比例或缴费基数时需重新签订；</span>
+		</div>
+		<div style="position:absolute; top:49em; left:4em;">
+			<span>乙方办理减员、退休或连续三月由银行退款时，合同自动终止。</span>
+		</div>
+		<div style="position:absolute; top:50.5em; left:6em;">
+			<span>2.本合同由甲方盖章及乙方签字后生效，合同文本由甲乙双方各执一份。</span>
+		</div>
+		<div style="position:absolute; top:52em; left:6em;">
+			<span>3.本合同未尽事宜，由甲乙双方协商解决。</span>
+		</div>
+		<div style="position:absolute; top:55em; left:6em;">
+			<span>甲方单位（盖章）</span>
+		</div>
+		<div style="position:absolute; top:55em; left:28em;">
+			<span>乙方签字：</span>
+		</div>
+		<div style="position:absolute; top:58em; left:4em;">
+			<span>注：社会保险缴费查询、政策咨询电话：12333</span>
+		</div>
+		<div style="position:absolute; top:59.5em; left:6em;">
+			<span>出具各类社保证明、办理外地社保转移、办理单位缴费等咨询电话：87122922</span>
+		</div>
+		<div style="position:absolute; top:61em; left:6em;">
+			<span>齐鲁银行扣款咨询电话：85983381(总行)，87589967(窗口)</span>
+		</div>
+		<div style="position:absolute; top:62.5em; left:6em;">
+			<span>槐荫区医保办咨询电话：87589964</span>
+		</div>
+		<div style="position:absolute; top:64em; left:6em;">
+			<span>槐荫区职介中心咨询电话：87957286</span>
+		</div>
+		<div style="position:absolute; top:65.5em; left:30em;">
+			<span>${(time)!''}</span>
+		</div>
+	</div>
+</body>
+</html>

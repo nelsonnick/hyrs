@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>外地医保申请表</title>
+	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script language="javascript" src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script language="javascript" src="${contextPath}/jquery/jquery.jqprint.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#print").click(function() {
+				$(".my_show").jqprint();
+			});
+		});
+	</script>
+	<style media="print">
+		.Noprint {
+			display: none;
+		}
+		.PageNext {
+			page-break-after: always;
+		}
+	</style>
+</head>
+<body>
+	<center class="Noprint">
+        <p>
+            <object id="WebBrowser" classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0" width="0"></object>
+            <button type="button"  class="btn btn-success"  onclick="window.print()">直接打印</button>
+            <button type="button"  class="btn btn-default"  onclick="history.go(-1)">返回上级</button>
+            <br />
+        </p>
+    </center>
+    <div class="my_show">
+    	<div style="position:absolute; top: 0em; left:1.5em;"><span><h2>济南市灵活就业人员参加职工医疗保险申请表</h2></span></div>
+    	<div style="position:absolute; top: 5em; left:2em;"><span><h4>职工姓名:${(pname)!''}</h4></span></div>
+    	<div style="position:absolute; top: 5em; left:9em;"><span><h4></h4></span></div>
+    	<div style="position:absolute; top: 5em; left:16em;"><span><h4>身份证号:${(pnumber)!''}</h4></span></div>
+    	<div style="position:absolute; top: 5em; left:23em;"><span><h4></h4></span></div>
+    	<div style="position:absolute; top: 8em; left:2em;"><span><h4>现居住地:${(paddress)!''}</h4></span></div>
+    	<div style="position:absolute; top: 8em; left:9em;"><span><h4></h4></span></div>
+    	<div style="position:absolute; top: 7em; left:40em;"><span><h2>照&nbsp;片</h2></span></div>
+    	<div style="position:absolute; top: 11em; left:2em;"><span><h4>户籍地:</h4></span></div>
+    	<div style="position:absolute; top: 14em; left:2em;"><span><h4>服务经营场所:</h4></span></div>
+    	<div style="position:absolute; top: 14em; left:30em;"><span><h4>有无暂住证:&nbsp;□有&nbsp;&nbsp;□无</h4></span></div>
+    	<div style="position:absolute; top: 14em; left:38em;"><span><h4></h4></span></div>
+    	<div style="position:absolute; top: 17em; left:2em;"><span><h4>有无劳动合同:&nbsp;□有&nbsp;&nbsp;□无</h4></span></div>
+    	<div style="position:absolute; top: 17em; left:11em;"><span><h4></h4></span></div>
+    	<div style="position:absolute; top: 17em; left:17em;"><span><h4>年收入额及来源:</h4></span></div>
+		<div style="position:absolute; top: 20em; left:2em;"><span><h4>健康状况:</h4></span></div>
+		<div style="position:absolute; top: 20em; left:14em;"><span><h4>有无重大疾病:&nbsp;□有&nbsp;&nbsp;□无</h4></span></div>
+   		<div style="position:absolute; top: 20em; left:23em;"><span><h4></h4></span></div>
+   		<div style="position:absolute; top: 20em; left:30em;"><span><h4>联系电话:${(pphone)!''}</h4></span></div>
+   		<div style="position:absolute; top: 20em; left:37em;"><span><h4></h4></span></div>
+		<div style="position:absolute; top: 23em; left:2em;"><span><h4> 过去一年内是否曾患下列疾病：</h4></span></div>
+		<div style="position:absolute; top: 26em; left:2em;"><span><h4>1、尿毒症</h4></span></div>
+		<div style="position:absolute; top: 26em; left:33em;"><span><h4>□是&nbsp;&nbsp;□否</h4></span></div>
+		<div style="position:absolute; top: 29em; left:2em;"><span><h4>2、恶性肿瘤</h4></span></div>
+		<div style="position:absolute; top: 29em; left:33em;"><span><h4>□是&nbsp;&nbsp;□否</h4></span></div>
+		<div style="position:absolute; top: 32em; left:2em;"><span><h4>3、血友病、白血病</h4></span></div>
+		<div style="position:absolute; top: 32em; left:33em;"><span><h4>□是&nbsp;&nbsp;□否</h4></span></div>
+		<div style="position:absolute; top: 35em; left:2em;"><span><h4>4、器官移植及术后抗排异</h4></span></div>
+		<div style="position:absolute; top: 35em; left:33em;"><span><h4>□是&nbsp;&nbsp;□否</h4></span></div>
+		<div style="position:absolute; top: 38em; left:2em;"><span><h4>以上填写事项均由本人确认，如有不实，本人愿意承担一切责任。</h4></span></div>
+		<div style="position:absolute; top: 41em; left:26em;"><span><h4>申请人签名：</h4></span></div>
+		<div style="position:absolute; top: 44em; left:2em;"><span><h4>经办机构意见：(盖章)</h4></span></div>
+		<div style="position:absolute; top: 44em; left:16em;"><span><h4>区医保办意见：(盖章)</h4></span></div>
+		<div style="position:absolute; top: 44em; left:30em;"><span><h4>备注：</h4></span></div>
+		<div style="position:absolute; top: 46em; left:4em;"><span><h4>经核实，以上所</h4></span></div>
+		<div style="position:absolute; top: 48em; left:2em;"><span><h4>填内容属实。</h4></span></div>
+		<div style="position:absolute; top: 51em; left:2em;"><span><h4>经办人：</h4></span></div>
+		<div style="position:absolute; top: 47em; left:16em;"><span><h4>同意参保</h4></span></div>
+		<div style="position:absolute; top: 51em; left:16em;"><span><h4>经办人：</h4></span></div>
+		<div style="position:absolute; top: 54em; left:2em;"><span><h4>${(yyyy)!''}年${(mm)!''}月${(dd)!''}日</h4></span></div>
+		<div style="position:absolute; top: 54em; left:16em;"><span><h4>${(yyyy)!''}年${(mm)!''}月${(dd)!''}日</h4></span></div>
+		<div style="position:absolute; top: 57em; left:2em;"><span><h4>办理地点：${(lname)!''}&nbsp;&nbsp;办理内容：${(content)!''}&nbsp;&nbsp;医保比例：${(radioAfter)!''}</h4></span></div>
+		<div style="position:absolute; top: 60em; left:2em;"><span><h4>生效月份：${(year)!''}年${(month)!''}月&nbsp;&nbsp;办理时间：${(time)!''}</h4></span></div>
+		
+
+
+		<div style="position:absolute; top: 3.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 6.5em; left:1em;"><span>__________________________________________________________________</span></div>
+		<div style="position:absolute; top: 9.5em; left:1em;"><span>__________________________________________________________________</span></div>
+		<div style="position:absolute; top: 12.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 15.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 18.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 21.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 24.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 27.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 30.5em; left:1em;"><span>________________________________________________________________________________</span></div>		
+		<div style="position:absolute; top: 33.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 36.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		
+		<div style="position:absolute; top: 42.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		<div style="position:absolute; top: 55.5em; left:1em;"><span>________________________________________________________________________________</span></div>
+		
+		<div style="position:absolute; top: 4.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 13.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 14.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 15.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 16.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 17.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 18.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 19.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 20.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 21.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 22.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 23.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 24.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 25.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 26.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 27.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 28.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 29.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 30.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 31.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 32.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 33.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 34.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 35.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 36.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 37.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 38.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 39.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 40.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 41.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 42.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 43.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 44.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 45.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 46.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 47.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 48.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 49.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 50.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 51.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 52.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 53.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 54.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 55.5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 13em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 14em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 15em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 16em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 17em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 18em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 19em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 20em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 21em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 22em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 23em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 24em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 25em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 26em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 27em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 28em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 29em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 30em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 31em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 32em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 33em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 34em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 35em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 36em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 37em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 38em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 39em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 40em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 41em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 42em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 43em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 44em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 45em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 46em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 47em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 48em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 49em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 50em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 51em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 52em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 53em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 54em; left:0.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 55em; left:0.7em;"><span >|</span></div>
+		
+		<div style="position:absolute; top: 4.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 13.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 14.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 15.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 16.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 17.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 18.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 19.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 20.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 21.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 22.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 23.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 24.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 25.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 26.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 27.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 28.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 29.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 30.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 31.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 32.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 33.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 34.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 35.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 36.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 37.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 38.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 39.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 40.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 41.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 42.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 43.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 44.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 45.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 46.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 47.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 48.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 49.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 50.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 51.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 52.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 53.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 54.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 55.5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 13em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 14em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 15em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 16em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 17em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 18em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 19em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 20em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 21em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 22em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 23em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 24em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 25em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 26em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 27em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 28em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 29em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 30em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 31em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 32em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 33em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 34em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 35em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 36em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 37em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 38em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 39em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 40em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 41em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 42em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 43em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 44em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 45em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 46em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 47em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 48em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 49em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 50em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 51em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 52em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 53em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 54em; left:46.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 55em; left:46.7em;"><span >|</span></div>
+				
+		<div style="position:absolute; top: 4.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 5.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 6.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 6em; left:15em;"><span >|</span></div>
+		
+		<div style="position:absolute; top: 4.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12.5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 5em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 6em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 7em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 8em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 9em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 10em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 11em; left:38.7em;"><span >|</span></div>
+		<div style="position:absolute; top: 12em; left:38.7em;"><span >|</span></div>
+		
+		<div style="position:absolute; top: 13.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 14.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 15.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 14em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 15em; left:29em;"><span >|</span></div>
+
+		<div style="position:absolute; top: 16.5em; left:16em;"><span >|</span></div>
+		<div style="position:absolute; top: 17.5em; left:16em;"><span >|</span></div>
+		<div style="position:absolute; top: 18.5em; left:16em;"><span >|</span></div>
+		<div style="position:absolute; top: 17em; left:16em;"><span >|</span></div>
+		<div style="position:absolute; top: 18em; left:16em;"><span >|</span></div>
+
+		<div style="position:absolute; top: 19.5em; left:13em;"><span >|</span></div>
+		<div style="position:absolute; top: 20.5em; left:13em;"><span >|</span></div>
+		<div style="position:absolute; top: 21.5em; left:13em;"><span >|</span></div>
+		<div style="position:absolute; top: 20em; left:13em;"><span >|</span></div>
+		<div style="position:absolute; top: 21em; left:13em;"><span >|</span></div>
+
+		<div style="position:absolute; top: 19.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 20.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 21.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 20em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 21em; left:29em;"><span >|</span></div>
+
+		<div style="position:absolute; top: 43.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 44.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 45.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 46.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 47.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 48.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 49.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 50.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 51.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 52.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 53.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 54.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 55.5em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 44em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 45em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 46em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 47em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 48em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 49em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 50em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 51em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 52em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 53em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 54em; left:15em;"><span >|</span></div>
+		<div style="position:absolute; top: 55em; left:15em;"><span >|</span></div>
+		
+		<div style="position:absolute; top: 43.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 44.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 45.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 46.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 47.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 48.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 49.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 50.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 51.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 52.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 53.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 54.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 55.5em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 44em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 45em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 46em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 47em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 48em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 49em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 50em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 51em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 52em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 53em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 54em; left:29em;"><span >|</span></div>
+		<div style="position:absolute; top: 55em; left:29em;"><span >|</span></div>
+    </div>
+</body>
+</html>

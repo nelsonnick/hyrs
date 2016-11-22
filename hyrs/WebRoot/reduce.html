@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>减员证明</title>
+	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script language="javascript" src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script language="javascript" src="${contextPath}/jquery/jquery.jqprint.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#print").click(function() {
+				$(".my_show").jqprint();
+			})
+		});
+	</script>
+	<style media="print">
+		.Noprint {
+			display: none;
+		}
+		.PageNext {
+			page-break-after: always;
+		}
+	</style>
+</head>
+<body>
+	<center class="Noprint">
+		<p>
+			<object id="WebBrowser"
+				classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height="0"
+				width="0"></object>
+			<button type="button" class="btn btn-success"
+				onclick="window.print()">直接打印</button>
+			<button type="button" class="btn btn-default"
+				onclick="history.go(-1)">返回上级</button>
+			<br />
+		</p>
+	</center>
+	<div class="my_show">
+		<div style="position:absolute; top:2em; left:12em;">
+			<span><h1 style="font-weight:bold">灵活就业人员减员证明</h1></span>
+		</div>
+		<div style="position:absolute; top:9em; left:4em;">
+			<span style="font-weight:bold">人员姓名：${(pname)!''}</span>
+		</div>
+		<div style="position:absolute; top:12em; left:4em;">
+			<span style="font-weight:bold">证件号码：${(pnumber)!''}</span>
+		</div>
+		<div style="position:absolute; top:15em; left:6em;">
+			<span>该市民已在我中心处登记办理${(year)!''}年${(month)!''}月的社保减员业务。</span>
+		</div>
+		<div style="position:absolute; top:18em; left:4em;">
+			<span>特此证明！</span>
+		</div>
+		<div style="position:absolute; top:27em; left:4em;">
+			<span style="font-weight:bold">特别说明：</span>
+		</div>
+		<div style="position:absolute; top:30em; left:4em;">
+			<span>当月6日至25日登记办理减员的，请参保单位于当月26日后办理增员；</span>
+		</div>
+		<div style="position:absolute; top:33em; left:4em;">
+			<span>当月26日至次月5日登记办理减员的，请参保单位于次日后办理增员。</span>
+		</div>
+		<div style="position:absolute; top:36em; left:4em;">
+			<span>如参保单位在增员办理日期内无法顺利增员，请及时与槐荫区职介中心联络。</span>
+		</div>
+		<div style="position:absolute; top:42em; left:4em;">
+			<span>注：社会保险缴费查询、政策咨询电话：12333</span>
+		</div>
+		<div style="position:absolute; top:45em; left:6em;">
+			<span>出具各类社保证明、办理外地社保转移、办理单位缴费等咨询电话：87122922</span>
+		</div>
+		<div style="position:absolute; top:48em; left:6em;">
+			<span>${(lname)!''}社保中心咨询电话：${(lphone)!''}</span>
+		</div>
+		<div style="position:absolute; top:51em; left:6em;">
+			<span>槐荫区医保办咨询电话：87589964</span>
+		</div>
+		<div style="position:absolute; top:54em; left:6em;">
+			<span>槐荫区职介中心咨询电话：87957286</span>
+		</div>
+		<div style="position:absolute; top:60em; left:30em;">
+			<span>${(lname)!''}社保中心（盖章）</span>
+		</div>
+		<div style="position:absolute; top:63em; left:30em;">
+			<span>${(time)!''}</span>
+		</div>
+	</div>
+</body>
+</html>

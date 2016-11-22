@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>槐荫区职业介绍中心——业务信息</title>
+    	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+    <link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<script>
+		function senfe(o, a, b, c, d) {
+			var t = document.getElementById(o).getElementsByTagName("tr");
+			for (var i = 0; i < t.length; i++) {
+				t[i].style.backgroundColor = (t[i].sectionRowIndex % 2 == 0) ? a
+						: b;
+				t[i].onclick = function() {
+					if (this.x != "1") {
+						this.x = "1";
+						this.style.backgroundColor = d;
+					} else {
+						this.x = "0";
+						this.style.backgroundColor = (this.sectionRowIndex % 2 == 0) ? a
+								: b;
+					}
+				};
+				t[i].onmouseover = function() {
+					if (this.x != "1")
+						this.style.backgroundColor = c;
+				};
+				t[i].onmouseout = function() {
+					if (this.x != "1")
+						this.style.backgroundColor = (this.sectionRowIndex % 2 == 0) ? a
+								: b;
+				};
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function() {
+			//senfe("表格名称","奇数行背景","偶数行背景","鼠标经过背景","点击后背景");
+			senfe("mytable", "#f8fbfc", "#e5f1f4", "#ecfbd4", "#bce774");
+		});
+	</script>
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/user/passwordAlterUI">${(userName)!''}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="${contextPath}/user/homeUI">公告栏</a></li>
+				<li><a href="${contextPath}/person/insureUI">社保信息</a></li>
+				<li class="active"><a href="${contextPath}/operate/operateUI">业务信息</a></li>
+				<li><a href="${contextPath}/money/moneyUI">银行扣款</a></li>
+				<li><a href="${contextPath}/information/infoUI">信息变更</a></li>
+				<li><a href="${contextPath}/operate/operateCountUI">业务统计</a></li>
+				<#if userLocationId!=15 && userLocationId!=19>
+					<li><a href="${contextPath}/card/cardUI">批量开卡</a></li>
+				</#if>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="${contextPath}/export/exportOperate">业务导出</a></li>
+				<li><a href="${contextPath}/user/logout">退出程序</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="container-fluid">
+    	<form class="form-inline" action="${contextPath}/operate/operateQuery" method="post">
+	    	<div class="form-group">
+	          <input type="text" class="form-control" id="name" placeholder="请输入人员姓名" value="${(queryName)!''}" name="queryName" maxlength="8">
+	        </div>
+	        <div class="form-group">
+	          <input type="text" class="form-control" id="name" placeholder="请输入证件号码" value="${(queryNumber)!''}" name="queryNumber" maxlength="18">
+	        </div>
+	        <div class="form-group">
+	          <input type="text" class="form-control" id="name" placeholder="请输入办理地点" value="${(queryLocation)!''}" name="queryLocation" maxlength="6">
+	        </div>
+	        <div class="form-group">
+	          <input type="text" class="form-control" id="name" placeholder="请输入业务内容" value="${(queryContent)!''}" name="queryContent" maxlength="4">
+	        </div>
+	        
+	        <div class="form-group">
+	          <input type="text" class="form-control" id="name" placeholder="请输入生效月份" value="${(queryMonth)!''}" name="queryMonth" maxlength="6">
+	        </div>
+	        <button type="submit" class="btn btn-default">查找</button>
+    	</form>
+    </div>
+
+    <hr/>
+
+    <div class="container-fluid  table-responsive">
+  	  <table class="table table-bordered table-condensed" id="mytable">
+          <tr>
+			<th class="text-center">人员姓名</th>
+            <th class="text-center">证件号码</th>
+            <th class="text-center">之后基数</th>
+            <th class="text-center">之后比例</th>
+            <th class="text-center">之前基数</th>
+            <th class="text-center">之前比例</th>
+            <th class="text-center">业务内容</th>
+            <th class="text-center">生效月份</th>
+            <th class="text-center">办理时间</th>
+            <th class="text-center">办理地点</th>
+            <th class="text-center">操作人员</th>
+            <th class="text-center">备注</th>
+            <#if userLocationId!=15 && userLocationId!=19>
+            	<th class="text-center">业务打印</th>
+            </#if>
+          </tr>
+          <#list operatePage.getList() as x>
+	      <tr>
+		       	<td class="text-center">${(x.pname)!''}</td>
+		       	<td class="text-center">${(x.pnumber)!''}</td>
+		       	<td class="text-center">${(x.baseAfter)!''}</td>
+		       	<td class="text-center">${(x.radioAfter)!''}</td>
+		       	<td class="text-center">${(x.baseBefore)!''}</td>
+		       	<td class="text-center">${(x.radioBefore)!''}</td>
+		       	<td class="text-center">${(x.content)!''}</td>
+		       	<td class="text-center">${(x.month)!''}</td>
+		       	<td class="text-center">${(x.time)!''}</td>
+		       	<td class="text-center">${(x.lname)!''}</td>
+		       	<td class="text-center">${(x.uname)!''}</td>
+		       	<td class="text-center">${(x.remark)!''}</td>
+		       	<#if userLocationId!=15 && userLocationId!=19>
+			       	<#if x.content=="社保增员" ||x.content=="社保变更" >
+			       		<#if (x.radioAfter=="-5.5-" ||x.radioAfter=="-10-") && (x.radioAfter!=x.radioBefore)>
+							<td class="text-center">
+								<a class="btn btn-xs btn-primary" href="${contextPath}/print/bank?id=${(x.id)!''}">业务单据</a>
+								<a class="btn btn-xs btn-success" href="${contextPath}/print/contract?id=${(x.id)!''}">代缴合同</a>
+								<a class="btn btn-xs btn-warning" href="${contextPath}/print/medical?id=${(x.id)!''}">外地医保</a>
+							</td>
+						<#else>
+							<td class="text-center">
+								<a class="btn btn-xs btn-primary" href="${contextPath}/print/bank?id=${(x.id)!''}">业务单据</a>
+								<a class="btn btn-xs btn-success" href="${contextPath}/print/contract?id=${(x.id)!''}">代缴合同</a>
+							</td>
+						</#if>
+					<#elseif x.content=="正常减员">
+						<td class="text-center">
+							<a class="btn btn-xs btn-danger" href="${contextPath}/print/reduce?id=${(x.id)!''}">减员证明</a>
+						</td>
+					<#elseif x.content=="办理退休">
+						<td class="text-center">
+							<!--<a class="btn btn-xs btn-primary" href="${contextPath}/print/bank?id=${(x.id)!''}">业务单据</a>-->
+						</td>
+					<#else>
+						<td class="text-center">信息有误，请联系管理员！</td>
+					</#if>
+				</#if>
+	      </tr>
+       	</#list>
+      </table>
+     <#include "/paginate.html" />
+	 <@paginate currentPage=operatePage.pageNumber totalPage=operatePage.totalPage actionUrl="${contextPath}/operate/operateQuery/" />
+    </div>
+   
+  </body>
+</html>

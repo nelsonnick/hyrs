@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>槐荫区职业介绍中心</title>
+	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-saclable=no">
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#red {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+					<span class="sr-only">切换导航</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand active" href="${contextPath}/user/loginUI">首页</a>
+				<a class="navbar-brand" href="${contextPath}/user/contactUI">联络</a>
+				<a class="navbar-brand" href="${contextPath}/user/retireUI">计算</a>
+			</div>
+			<!--<div id="navbar" class="navbar-collapse collapse">-->
+			<div class="navbar-header">
+				<form class="navbar-form navbar-right"
+					action="${contextPath}/user/login" method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入用户名"
+							name="number">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="请输入密码"
+							name="password">
+					</div>
+					<button type="submit" class="btn btn-success">登陆</button>
+					<div class="form-group">
+						<label id="red">${(error)!''}</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>温暖人社</h1>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——以实际行动践行社会主义核心价值观</p>
+			<p>
+				<a class="btn btn-default btn-lg" href="#">点击对应部门，可弹出联系电话和地址</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="text-center">槐荫区</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover"  data-trigger="focus" title="联系电话：87122922"
+						data-content="  联系地址：经六路536-2号-4楼">社保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87957286"
+						data-content="联系地址：北小辛庄西街24号，槐荫政务服务中心">职介中心</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87589964"
+						data-content="联系地址：北小辛庄西街24号，槐荫政务服务中心">医保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87959954"
+						data-content="联系地址：北小辛庄西街24号，槐荫政务服务中心">退管科</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87589961"
+						data-content="联系地址：北小辛庄西街24号，槐荫政务服务中心">失业科</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87954100"
+						data-content="联系地址：营市东街22号">人才交流</a>
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85983381"
+						data-content="联系地址：张庄路190号（张庄路与二环西路路口东南角）">城西支行</a>  
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87939268"
+						data-content="联系地址：经三路291号(市华联南)">西市场</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87920528"
+						data-content="联系地址：经四纬八路478号(海佑重华东临)">五里沟</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87958181"
+						data-content="联系地址：经六路538号(槐荫区文体中心)-1楼">道德街</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87188556"
+						data-content="联系地址：营市西街29号(老皮鞋厂)">营市街</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87912400"
+						data-content="联系地址：岔路街111号(槐荫国税对面)">青年公园</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87163043"
+						data-content="联系地址：经四路681号(十二中对面)">中大槐树</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87106819"
+						data-content="联系地址：经十路23237号振兴花园(振兴街综合惠民服务中心)">振兴街</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：87190681"
+						data-content="联系地址：南辛中街70号(南辛派出所西邻)">南辛庄</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87525356"
+						data-content="联系地址：段兴西路8号(段店北路街道办事处内)">段店北路</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85985498"
+						data-content="联系地址：匡山小区外海商铺10号">匡山</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87524298"
+						data-content="联系地址：段北路157号(张庄办事处内)">张庄</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85993679"
+						data-content="联系地址：西沙小区美里湖惠民服务大厅(美里湖办事处对面)">美里湖</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：85982386"
+						data-content="联系地址：济齐路149号(吴家堡办事处对面)">吴家堡</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87589089"
+						data-content="联系地址：济兖路462号(腊山办事处附属楼)">腊山</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87589791"
+						data-content="联系地址：经十路3333号(玉清湖办事处内)">玉清湖</a> 
+					<a tabindex="0" class="btn btn-lg btn-primary" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87589491"
+						data-content="联系地址：齐州路兴福佳苑东门北200米">兴福</a>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">天桥区</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-info" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：81608862"
+						data-content="联系地址：西工商河路27号">社保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85954390"
+						data-content="联系地址：无影山东路31号">就业办</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872680"
+						data-content="联系地址：无影山东路31号">医保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85943846"
+						data-content="联系地址：无影山东路31号">退管办理</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85943846"
+						data-content="联系地址：无影山东路31号">失业办理</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872680"
+						data-content="联系地址：无影山东路31号">人才交流</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85980664"
+						data-content="联系地址：无影山西路9号">堤口路</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：81601038"
+						data-content="联系地址：锦屏街8号">制锦市</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：55692062"
+						data-content="联系地址：盛世名门小区5号楼旁">纬北路</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872771"
+						data-content="联系地址：标山小区7号楼西侧">工人新村北村</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872876"
+						data-content="联系地址：济洛路123号">工人新村南村</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85911890"
+						data-content="联系地址：济洛路154-12号">官扎营</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85064494"
+						data-content="联系地址：官扎营西街宝丰巷9号">宝华街</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：81778115"
+						data-content="联系地址：北坦大街25号">北坦</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872892"
+						data-content="联系地址：义合西街3号">天桥东街</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85872783"
+						data-content="联系地址：无影山东路10号">无影山</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85768609"
+						data-content="联系地址：药山办事处西一站路南张庄商业街">药山</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85869200"
+						data-content="联系地址：西泺河路18号">北园</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85736538"
+						data-content="联系地址：泺安路11号太平洋小区">泺口</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：88077817"
+						data-content="联系地址：桑梓店镇政府西40米文体中心1楼">桑梓店</a> 
+					<a tabindex="0" class="btn btn-lg btn-info" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：88097645"
+						data-content="联系地址：大桥镇政府建委1楼">大桥</a>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">历下区</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86961707"
+						data-content="联系地址：东仓小区23号">社保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：86950883,86952351"
+						data-content="联系地址：">就业办</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">医保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86950883,86952351" 
+						data-content="联系地址：">退管办理</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">失业办理</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">人才交流</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86098860"
+						data-content="联系地址：">泉城路</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：81939669" 
+						data-content="联系地址：">大明湖</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86553723"
+						data-content="联系地址：">东关</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：86568770" 
+						data-content="联系地址：">建筑新村</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86157691"
+						data-content="联系地址：">千佛山</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：86916678" 
+						data-content="联系地址：">趵突泉</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86971701"
+						data-content="联系地址：">解放路</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：85876768" 
+						data-content="联系地址：">文化东路</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：88934173"
+						data-content="联系地址：">燕山路</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：81856776" 
+						data-content="联系地址：">甸柳新村</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：81856572"
+						data-content="联系地址：">姚家</a> 
+					<a tabindex="0" class="btn btn-lg btn-success" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：88826634" 
+						data-content="联系地址：">智远</a>
+					<a tabindex="0" class="btn btn-lg btn-success" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：81792956"
+						data-content="联系地址：">龙洞</a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="text-center">市中区</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82706562"
+						data-content="  联系地址：英雄山路8号(市中区政务中心)">社保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：58698570" 
+						data-content="联系地址：英雄山路8号(市中区政务中心)">就业办</a>
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82078964"
+						data-content="联系地址：英雄山路8号(市中区政务中心)">医保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：58698572，82078466" 
+						data-content="联系地址：英雄山路8号(市中区政务中心)">退管科</a>
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：58698573"
+						data-content="联系地址：英雄山路8号(市中区政务中心)">失业科</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：英雄山路8号(市中区政务中心)">人才交流</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82900255"
+						data-content="联系地址：英雄山路10-2号（八一国美后面）">四里村</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87081155" 
+						data-content="联系地址：经五小纬二路53-3号">大观园</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82078259"
+						data-content="联系地址：乐山南区6号">杆石桥</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：86108265" 
+						data-content="联系地址：馆驿街新区8号楼">魏家庄</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：86115001"
+						data-content="联系地址：经八路东头（民族市场对面）">泺源</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：82569259" 
+						data-content="联系地址：玉函路266号（伟东四区附近）">六里山</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82861735"
+						data-content="联系地址：陈庄大街16号">二七新村</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：82746599" 
+						data-content="联系地址：七里山西路15-3（市残联对面）">七里山</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82746612"
+						data-content="联系地址：舜玉南区101号楼南侧">舜玉</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：89737732" 
+						data-content="联系地址：阳光舜城五区6号楼">舜耕</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：87197255"
+						data-content="联系地址：青龙山北路东头">王官庄</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87191829" 
+						data-content="联系地址：白马山西路39号">白马山</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：87192884"
+						data-content="联系地址：济微路118号">七贤</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：82791186" 
+						data-content="联系地址：英雄山南路39号">十六里河</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：82792825"
+						data-content="联系地址：二环南路兴隆名酒市场对面">兴隆</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87591820" 
+						data-content="联系地址：104国道镇政府东侧">党家</a> 
+					<a tabindex="0" class="btn btn-lg btn-warning" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：87599812"
+						data-content="联系地址：陡沟村北">陡沟</a>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">历城区</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：88066047"
+						data-content="联系地址：花园路2-1号">社保办</a> 
+					<a tabindex="0"class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：88115017" 
+						data-content="联系地址：">就业办</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">医保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">退管科</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">失业科</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">人才交流</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">山大路</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">洪楼</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">全福</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">华山</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">荷花路</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">王舍人</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">鲍山</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">郭店</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">唐冶</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">港沟</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">遥墙</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">临港</a>
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">仲宫</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">西营</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">柳埠</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">彩石</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">董家</a> 
+					<a tabindex="0" class="btn btn-lg btn-danger" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：" 
+						data-content="联系地址：">唐王</a>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">其他</h2>
+				<form class="form-inline">
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：87222253"
+						data-content="联系地址：">长清区就业办</a> 
+					<a tabindex="0" class="btn btn-lg btn-default" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：88871880"
+						data-content="联系地址：高新区行政审批服务中心三楼A厅">高新区社保办</a> 
+					<a tabindex="0" class="btn btn-lg btn-default" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：87081605" 
+						data-content="联系地址：经十路22399号">济南市人才</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话："
+						data-content="联系地址：">山东省职介</a> 
+					<a tabindex="0" class="btn btn-lg btn-default" role="button" 
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967200" 
+						data-content="联系地址：市中区经二路193号">市社保征缴处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967212"
+						data-content="联系地址：市中区经二路193号">市社保基金处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967220"
+						data-content="联系地址：市中区经二路193号">社保卡业务</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967221"
+						data-content="联系地址：市中区经二路193号">医保缴费年限审核业务</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967222"
+						data-content="联系地址：市中区经二路193号">社保关系转移业务</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967600"
+						data-content="联系地址：市中区经二路193号">医保卡挂失</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967230"
+						data-content="联系地址：市中区经二路193号">机关养老处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967240"
+						data-content="联系地址：市中区经二路193号">企业养老处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967243"
+						data-content="联系地址：市中区经二路193号">退休管理处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967250"
+						data-content="联系地址：市中区经二路193号">职工医保处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967260"
+						data-content="联系地址：市中区经二路193号">居民医保处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967270"
+						data-content="联系地址：市中区经二路193号">医保门规管理服务处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68967282"
+						data-content="联系地址：市中区经二路193号">工伤生育保险处</a>
+					<a tabindex="0" class="btn btn-lg btn-default" role="button"
+						data-toggle="popover" data-trigger="focus" title="联系电话：68966112，68966106"
+						data-content="联系地址：市中区经二路193号">工伤认定、劳动能力鉴定业务</a>						
+				</form>
+			</div>
+		</div>
+	</div>
+	<hr />
+
+	<footer>
+		<div class="container">
+			<p class="text-center">槐荫区职业介绍中心 2015</p>
+			<p class="text-center">MADE BY WANGTIANSHUO</p>
+		</div>
+	</footer>
+	<script>
+		$(function() {
+			$("[data-toggle='popover']").popover();
+		});
+	</script>
+</body>
+</html>

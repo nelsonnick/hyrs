@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<title>槐荫区职业介绍中心</title>
+	<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-saclable=no">
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#red {color:red;}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand active" href="${contextPath}/user/loginUI">首页</a>
+				<a class="navbar-brand" href="${contextPath}/user/contactUI">联络</a>
+				<a class="navbar-brand" href="${contextPath}/user/retireUI">计算</a>
+			</div>
+			<div class="navbar-header">
+				<form class="navbar-form navbar-right" action="${contextPath}/user/login" method="post">
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入用户名" name="number">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="请输入密码" name="password">
+					</div>
+					<button type="submit" class="btn btn-success">登陆</button>
+					<div class="form-group">
+						<label id="red">${(error)!''}</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>温暖人社</h1>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——以实际行动践行社会主义核心价值观</p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="http://www.jnhyhrss.gov.cn/index.asp">济南市槐荫区人力资源和社会保障局</a>
+			</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="text-center">富强、民主、文明、和谐</h2>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是我国社会主义现代化国家的建设目标，也是从价值目标层面对社会主义核心价值观基本理念的凝练，在社会主义核心价值观中居于最高层次，对其他层次的价值理念具有统领作用。</p>
+
+				<p>
+					<a class="btn btn-primary btn-lg" href="http://app1.jnhrss.gov.cn:8001/siso/">济南市社会保险网上服务系统</a>
+				</p>
+
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">自由、平等、公正、法治</h2>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是对美好社会的生动表述，也是从社会层面对社会主义核心价值观基本理念的凝练。它反映了中国特色社会主义的基本属性，是我们党矢志不渝、长期实践的核心价值理念。</p>
+				<p>
+					<a class="btn btn-primary btn-lg" href="http://www.sdjnsi.gov.cn/">济南市社会保险事业局</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-center">爱国、敬业、诚信、友善</h2>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是公民基本道德规范，是从个人行为层面对社会主义核心价值观基本理念的凝练。它覆盖社会道德生活的各个领域，是公民必须恪守的基本道德准则，也是评价公民道德行为选择的基本价值标准。</p>
+				<p>
+					<a class="btn btn-primary btn-lg" href="http://www.jnhrss.gov.cn/query/">济南市社会保险网上查询系统</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<hr />
+
+	<footer>
+		<div class="container-fluid">
+			<p class="text-center">槐荫区职业介绍中心 2015</p>
+			<p class="text-center">MADE BY WANGTIANSHUO</p>
+		</div>
+	</footer>
+</body>
+</html>

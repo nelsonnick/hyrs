@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>槐荫区职业介绍中心——公告</title>
+		<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/user/passwordAlterUI">${(userName)!''}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="${contextPath}/user/homeUI">公告栏</a></li>
+				<li><a href="${contextPath}/person/insureUI">社保信息</a></li>
+				<li><a href="${contextPath}/operate/operateUI">业务信息</a></li>
+				<li><a href="${contextPath}/money/moneyUI">银行扣款</a></li>
+				<li><a href="${contextPath}/information/infoUI">信息变更</a></li>
+				<li><a href="${contextPath}/operate/operateCountUI">业务统计</a></li>
+				<#if userLocationId!=15 && userLocationId!=19>
+					<li><a href="${contextPath}/card/cardUI">批量开卡</a></li>
+				</#if>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="${contextPath}/user/logout">退出程序</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自上次业务会议后，各社保中心对新系统的使用十分得当，已顺利开展各项业务。
+		日前，区职介中心与区退管科进行协商后，力求简化退休办理流程并对现有系统进行升级维护，现进一步规范社保相关业务流程，说明如下：
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">1、业务办理人群。</span>本着属地管理的基本原则，只要市民提供的户籍信息为社保中心辖区内的，各社保中心必须办理，无需理会其之前的业务办理地。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">2、业务截至日期。</span>要求有条件的社保中心，社保业务全时段办理，但当月截至日期为当月5号，即每月6号为当月业务的起始日期。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">3、正常减员的具体说明。</span>各社保中心需自行建立减员台账，由市民登记确认后，在本系统内进行操作。该操作仅需要市民提供有效证件，并不需要打印任何信息！当月正常减员真正的开始时间为当月25日，截止到次月5日前，职介中心将于每日下班前进行网上操作。各社保中心全权受理辖区内居民的减员业务，职介中心仅受理在我中心办理的外区、外地人员减员业务。由于我中心无法出具减员表，故各社保中心如有需要，可打印减员证明。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">4、社保新增、变更业务说明。</span>市民需提供身份证/居住证、户口本等有效材料。社保中心在本系统上操作后，打印《城镇职工保险办理申请表》1份，签字盖章，上联由各社保中心留存，下联交付齐鲁银行窗口；打印《城镇职工保险代缴合同》2份，签字盖章，
+			1份由社保中心留存，1份由市民留存；市民提供身份证/暂住证复印件1或2份，由社保中心留存；外地市民参加医保时需额外打印《济南市灵活就业人员参加职工医疗保险申请表》，签字盖章。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">5、办理退休的说明。</span>区职介中心自12月起授权退管科登记办理退休，各社保中心无需在系统内登记退休。市民直接持身份证、户口本、档案前往区人社局4楼412办公室办理退休即可。注意：如果审批退休不通过，退管科将不会进行退休登记，也就是说，各社保中心无需再增员回去。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">6、打印材料说明。</span>更新后的系统可提供减员证明的打印，各社保中心可依照市民需求打印；所有的《城镇职工保险办理申请表》下联都需要交付给齐鲁银行。《城镇职工保险办理申请表》上联、《城镇职工保险代缴合同》、身份证复印件等相关材料具体如何留存，请各社保中心工作人员自行商议。
+			我中心要求各社保中心保存得当，有需要时便于查阅。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">7、强制减员说明。</span>连续三个月有退款的，齐鲁银行会删除其扣款信息，即强制减员。注意：是连续三个月退款，不是连续三个月没缴费！！！每个月的退款人员，各社保中心有义务通知市民本人。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">8、关于身份证过期的说明。</span>齐鲁银行日前系统升级后，即将过期的身份证已无法顺利开卡。要求此类市民前往公安部门重新办理身份证后，各社保中心再重新办理增员手续。
+	</div>
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+			style="color:Red">9、关于扣款的说明。</span>齐鲁银行将于每月11日下班后进行扣费工作（遇节假日顺延），经过同区退管科的沟通，我中心拟于每月16日进行网上申报。每月12日至15日，各社保中心可处理当月增员错误的人员，确保参保人顺利缴费。
+	</div>
+</body>
+</html>

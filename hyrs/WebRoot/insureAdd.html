@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>槐荫区职业介绍中心——社保续交</title>
+		<link rel="icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark" href="${contextPath}/image/icon/favicon.ico" type="image/x-icon" />
+	<link type="text/css" href="${contextPath}/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="${contextPath}/jquery/jquery-1.11.1.js"></script>
+	<script src="${contextPath}/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="${contextPath}/user/passwordAlterUI">${(userName)!''}</a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="${contextPath}/user/homeUI">公告栏</a></li>
+				<li class="active"><a href="${contextPath}/person/insureUI">社保信息</a></li>
+				<li><a href="${contextPath}/operate/operateUI">业务信息</a></li>
+				<li><a href="${contextPath}/money/moneyUI">银行扣款</a></li>
+				<li><a href="${contextPath}/information/infoUI">信息变更</a></li>
+				<li><a href="${contextPath}/operate/operateCountUI">业务统计</a></li>
+				<#if userLocationId!=15 && userLocationId!=19>
+					<li><a href="${contextPath}/card/cardUI">批量开卡</a></li>
+				</#if>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="${contextPath}/user/logout">退出程序</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+    <div class="container-fluid">
+    	<h2 class="col-sm-offset-1 col-sm-8 ">请核实后输入以下信息为市民办理社保续交业务</h2>
+    </div>
+    <hr/>
+  	<div class="container-fluid">
+  	<form class="form-horizontal" action="${contextPath}/person/insureAdd" method="post">
+    	<div class="form-group">
+        	<label class="col-sm-2 control-label">人员姓名：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="2~8个汉字之间" disabled name="personName" value="${(personName)!''}" maxlength="8">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">证件号码：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="18位身份证号码,末位X需大写" disabled name="personNumber" value="${(personNumber)!''}">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">证件到期：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="8位数字" name="personEnd" maxlength="8">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">联系电话：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="11位手机号码" disabled name="personPhone" value="${(personPhone)!''}">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">联系地址：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="户口本或暂住证上的地址" disabled name="personAddress" value="${(personAddress)!''}"  maxlength="200">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">缴费基数：</label>
+            <div class="col-sm-3">
+            	<input type="text" class="form-control" placeholder="原缴费基数"  disabled name="personBaseBefore" value="${(personBaseBefore)!''}">
+        	</div>
+            <div class="col-sm-3">
+            	<input type="text" class="form-control" placeholder="新缴费基数(社平工资的60%-100%)" name="personBaseAfter"  maxlength="4" value="${(baseLow)!''}">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">医疗保险：</label>
+            <div class="col-sm-3">
+            	<input type="text" class="form-control" placeholder="原医保比例"  disabled name="personRadioBefore" value="${(personRadioBefore)!''}" maxlength="4">
+        	</div>
+            <div class="col-sm-3">
+            	<select class="form-control" name="personRadioAfter">
+                 <option>-0-</option>
+                 <option>-5.5-</option>
+                 <option>-10-</option>
+              	</select>
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">必选</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        	<label class="col-sm-2 control-label">备注信息：</label>
+            <div class="col-sm-6">
+            	<input type="text" class="form-control" placeholder="" name="operateRemark"  maxlength="200">
+        	</div>
+            <div class="col-sm-4">
+            	<span><label class="col-sm-4 control-label">选填</label></span>
+        	</div>
+        </div>
+        <div class="form-group">
+        
+            <div class="col-sm-6">
+            	<input type="hidden" value="${(personId)!''}" name="personId">
+            	<input type="hidden" value="${(personBaseBefore)!''}" name="pbb">
+            	<input type="hidden" value="${(personRadioBefore)!''}" name="prb">
+            	<input type="hidden" value="${(personPhone)!''}" name="pp">
+            	<input type="hidden" value="${(personAddress)!''}" name="pa">
+            	<input type="hidden" value="${(personEnd)!''}" name="pend">
+            	<input type="hidden" value="${(personRemark)!''}" name="pr">
+        	</div>
+           
+        </div>
+        <hr/>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-1">
+            	<button type="submit" class="btn btn-success">确认续交</button>
+        	</div>
+            <div class="col-sm-offset-2 col-sm-1">
+            	<button type="reset" class="btn btn-danger">重新输入</button>
+        	</div>
+            <div class="col-sm-offset-2 col-sm-1">
+            	<button type="button" class="btn btn-default" onclick="history.go(-1)">返回上级</button>
+        	</div>
+        </div>
+    </form>
+  </div>
+  
+  
+</body>
+</html>
